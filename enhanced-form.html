@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Content & Forms Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background: #f9f9f9;
+        }
+        main {
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            text-align: left;
+        }
+        th {
+            background: #eaeaea;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 0.5em;
+        }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.2em;
+        }
+        .readonly {
+            background: #eee;
+        }
+        .media-section img,
+        .media-section video,
+        .media-section audio {
+            max-width: 100%;
+            margin-bottom: 1em;
+        }
+        .form-section {
+            margin-top: 2em;
+        }
+        button {
+            padding: 0.7em 1.5em;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>HTML5 Content & Forms Showcase</h1>
+            <p>This page demonstrates lists, tables, media, and a complete HTML5 form with validation.</p>
+        </header>
+
+        <section>
+            <h2>1. Lists</h2>
+            <ul>
+                <li>HTML5 supports semantic elements for better structure.</li>
+                <li>Lists help organize information clearly.</li>
+                <li>There are ordered (<code>&lt;ol&gt;</code>) and unordered (<code>&lt;ul&gt;</code>) lists.</li>
+            </ul>
+            <ol>
+                <li>Learn HTML5 basics</li>
+                <li>Practice with tables and media</li>
+                <li>Build accessible forms</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>2. Table Example</h2>
+            <table>
+                <caption>Sample Course Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML5 Elements</td>
+                        <td>2 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Tables & Lists</td>
+                        <td>1.5 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Forms & Validation</td>
+                        <td>2 hours</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="media-section">
+            <h2>3. Media Content</h2>
+            <figure>
+                <img src="WIN_20240428_02_10_53_Pro.jpg" alt="Sample placeholder image">
+                <figcaption>Example of an embedded image.</figcaption>
+            </figure>
+            <figure>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Sample audio playback.</figcaption>
+            </figure>
+            <figure>
+                <video controls width="400">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Sample video playback.</figcaption>
+            </figure>
+        </section>
+
+        <section class="form-section">
+            <h2>4. Complete HTML5 Form</h2>
+            <form autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="2" autocomplete="name">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label for="course">Choose a course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">--Select--</option>
+                        <option value="html">HTML5 Basics</option>
+                        <option value="css">CSS Fundamentals</option>
+                        <option value="js">JavaScript Essentials</option>
+                    </select>
+
+                    <label for="color">Favorite Color:</label>
+                    <input type="color" id="color" name="color" value="#2c3e50">
+
+                    <label for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked readonly class="readonly">
+                        Subscribe to newsletter (readonly)
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..." minlength="10" maxlength="200"></textarea>
+
+                    <label for="rating">Rate your experience (1-5):</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
